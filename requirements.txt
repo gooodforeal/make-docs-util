@@ -1,0 +1,3 @@
+# Python >= 3.9
+# scripts/build_html.py и scripts/build_toc.py используют
+# только стандартную библиотеку. Сторонние пакеты не нужны.
