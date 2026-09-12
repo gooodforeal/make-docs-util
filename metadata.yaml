@@ -1,0 +1,25 @@
+---
+title: "Люмен"
+subtitle: "Протокол адаптивного управления mesh-сетью уличного освещения"
+author: "Техническая документация учебного проекта"
+date: "2026"
+lang: ru
+toc-title: "Оглавление"
+toc-depth: 2
+colorlinks: true
+linkcolor: NavyBlue
+urlcolor: NavyBlue
+citecolor: NavyBlue
+geometry: margin=2.4cm
+fontsize: 12pt
+linestretch: 1.2
+mainfont: "Times New Roman"
+sansfont: "Arial"
+monofont: "Menlo"
+documentclass: article
+header-includes:
+  - \usepackage{indentfirst}
+  - \usepackage{float}
+  - \floatplacement{figure}{H}
+  - \floatplacement{table}{H}
+---
