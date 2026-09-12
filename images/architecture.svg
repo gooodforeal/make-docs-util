@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420">
+  <defs>
+    <style>
+      .box { fill: #f4f7fb; stroke: #1e3a5f; stroke-width: 1.6; }
+      .box-g { fill: #e8f0e9; stroke: #2d5a3d; stroke-width: 1.6; }
+      .box-c { fill: #eef2fa; stroke: #3d4a80; stroke-width: 1.6; }
+      .title { font: 700 15px Arial, Helvetica, sans-serif; fill: #1a2744; }
+      .lbl { font: 13px Arial, Helvetica, sans-serif; fill: #1a2744; }
+      .small { font: 11px Arial, Helvetica, sans-serif; fill: #3d4a63; }
+      .arr { stroke: #1e3a5f; stroke-width: 1.5; fill: none; marker-end: url(#ah); }
+      .cloud { fill: #e7eef6; stroke: #5a7194; stroke-width: 1.3; }
+    </style>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#1e3a5f"/>
+    </marker>
+  </defs>
+  <rect width="920" height="420" fill="#ffffff"/>
+  <text x="24" y="28" class="title">Поле участка</text>
+
+  <rect x="24" y="48" width="150" height="86" rx="8" class="box"/>
+  <text x="99" y="78" text-anchor="middle" class="lbl">Узел 1</text>
+  <text x="99" y="98" text-anchor="middle" class="small">LED + PIR + LMP</text>
+  <text x="99" y="116" text-anchor="middle" class="small">u, P(o)</text>
+
+  <rect x="198" y="48" width="150" height="86" rx="8" class="box"/>
+  <text x="273" y="78" text-anchor="middle" class="lbl">Узел 2</text>
+  <text x="273" y="98" text-anchor="middle" class="small">LED + PIR + LMP</text>
+  <text x="273" y="116" text-anchor="middle" class="small">u, P(o)</text>
+
+  <rect x="372" y="48" width="150" height="86" rx="8" class="box"/>
+  <text x="447" y="78" text-anchor="middle" class="lbl">Узел N</text>
+  <text x="447" y="98" text-anchor="middle" class="small">LED + радар</text>
+  <text x="447" y="116" text-anchor="middle" class="small">флаг critical</text>
+
+  <line x1="174" y1="91" x2="198" y2="91" class="arr"/>
+  <line x1="348" y1="91" x2="372" y2="91" class="arr"/>
+  <text x="273" y="40" text-anchor="middle" class="small">mesh IEEE 802.15.4</text>
+
+  <rect x="198" y="190" width="150" height="86" rx="8" class="box-g"/>
+  <text x="273" y="220" text-anchor="middle" class="lbl">Шлюз</text>
+  <text x="273" y="240" text-anchor="middle" class="small">RPL root + MQTT</text>
+  <text x="273" y="258" text-anchor="middle" class="small">Ethernet / LTE</text>
+
+  <line x1="273" y1="134" x2="273" y2="190" class="arr"/>
+
+  <ellipse cx="560" cy="233" rx="70" ry="36" class="cloud"/>
+  <text x="560" y="238" text-anchor="middle" class="lbl">IP-сеть</text>
+  <line x1="348" y1="233" x2="490" y2="233" class="arr"/>
+
+  <rect x="680" y="160" width="210" height="146" rx="8" class="box-c"/>
+  <text x="785" y="190" text-anchor="middle" class="lbl">Координатор</text>
+  <text x="785" y="214" text-anchor="middle" class="small">карта опор, ключи</text>
+  <text x="785" y="232" text-anchor="middle" class="small">политика класса</text>
+  <text x="785" y="250" text-anchor="middle" class="small">журнал аварий</text>
+  <text x="785" y="276" text-anchor="middle" class="small">медленный контур</text>
+  <line x1="630" y1="233" x2="680" y2="233" class="arr"/>
+
+  <rect x="24" y="320" width="872" height="76" rx="8" class="box"/>
+  <text x="40" y="348" class="lbl">Контуры управления</text>
+  <text x="40" y="372" class="small">Быстрый (100 мс): датчик → фильтр P(o) → консенсус u → драйвер LED. Не зависит от координатора.</text>
+  <text x="40" y="390" class="small">Медленный (минуты): POLICY, расписание, OTA. Идёт только через шлюз.</text>
+</svg>

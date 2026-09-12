@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="380" viewBox="0 0 640 380">
+  <defs>
+    <style>
+      .row { stroke: #1e3a5f; stroke-width: 1.6; }
+      .t { font: 700 15px Arial, Helvetica, sans-serif; fill: #1a2744; }
+      .s { font: 12px Arial, Helvetica, sans-serif; fill: #3d4a63; }
+    </style>
+  </defs>
+  <rect width="640" height="380" fill="#ffffff"/>
+  <rect x="80" y="24" width="480" height="52" rx="6" class="row" fill="#dce8f7"/>
+  <text x="320" y="46" text-anchor="middle" class="t">Lumen-CTRL</text>
+  <text x="320" y="64" text-anchor="middle" class="s">фильтр занятости, консенсус яркости, автомат</text>
+
+  <rect x="80" y="84" width="480" height="52" rx="6" class="row" fill="#e4eef8"/>
+  <text x="320" y="106" text-anchor="middle" class="t">Lumen-NET (LMP / UDP :17843)</text>
+  <text x="320" y="124" text-anchor="middle" class="s">OCCUP, HELLO, POLICY, TELEM, ALERT</text>
+
+  <rect x="80" y="144" width="480" height="52" rx="6" class="row" fill="#edf3f9"/>
+  <text x="320" y="166" text-anchor="middle" class="t">RPL</text>
+  <text x="320" y="184" text-anchor="middle" class="s">DODAG к шлюзу, до 4 хопов</text>
+
+  <rect x="80" y="204" width="480" height="52" rx="6" class="row" fill="#f3f7fb"/>
+  <text x="320" y="226" text-anchor="middle" class="t">6LoWPAN</text>
+  <text x="320" y="244" text-anchor="middle" class="s">IPHC, одна PHY-рамка на OCCUP</text>
+
+  <rect x="80" y="264" width="480" height="52" rx="6" class="row" fill="#f7fafc"/>
+  <text x="320" y="286" text-anchor="middle" class="t">IEEE 802.15.4 PHY/MAC</text>
+  <text x="320" y="304" text-anchor="middle" class="s">2,4 ГГц, CSMA-CA, AES-CCM-128</text>
+
+  <rect x="80" y="324" width="480" height="36" rx="6" class="row" fill="#fff8e8"/>
+  <text x="320" y="347" text-anchor="middle" class="t">драйвер LED · PIR · радар · RTC</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="480" viewBox="0 0 920 480">
+  <defs>
+    <style>
+      .t { font: 700 13px Arial, Helvetica, sans-serif; fill: #1a2744; }
+      .small { font: 11px Arial, Helvetica, sans-serif; fill: #3d4a63; }
+      .life { stroke: #9aa8b8; stroke-width: 1.2; stroke-dasharray: 4 4; }
+      .msg { stroke: #1e3a5f; stroke-width: 1.5; fill: none; marker-end: url(#ah); }
+      .note { fill: #fff8e8; stroke: #c4a35a; stroke-width: 1; }
+    </style>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#1e3a5f"/>
+    </marker>
+  </defs>
+  <rect width="920" height="480" fill="#ffffff"/>
+  <text x="80" y="36" text-anchor="middle" class="t">Датчик n3</text>
+  <text x="260" y="36" text-anchor="middle" class="t">Узел n3</text>
+  <text x="440" y="36" text-anchor="middle" class="t">Узел n4</text>
+  <text x="620" y="36" text-anchor="middle" class="t">Узел n5</text>
+  <text x="800" y="36" text-anchor="middle" class="t">Шлюз</text>
+
+  <line x1="80" y1="50" x2="80" y2="450" class="life"/>
+  <line x1="260" y1="50" x2="260" y2="450" class="life"/>
+  <line x1="440" y1="50" x2="440" y2="450" class="life"/>
+  <line x1="620" y1="50" x2="620" y2="450" class="life"/>
+  <line x1="800" y1="50" x2="800" y2="450" class="life"/>
+
+  <line x1="80" y1="80" x2="260" y2="80" class="msg"/>
+  <text x="170" y="72" text-anchor="middle" class="small">z = 1 (радар)</text>
+
+  <line x1="260" y1="120" x2="440" y2="120" class="msg"/>
+  <line x1="260" y1="120" x2="620" y2="150" class="msg"/>
+  <text x="400" y="112" class="small">OCCUP ttl=3, P(o)=0.82</text>
+
+  <rect x="390" y="168" width="200" height="36" rx="4" class="note"/>
+  <text x="490" y="191" text-anchor="middle" class="small">n4, n5 → ACTIVE заранее</text>
+
+  <line x1="260" y1="230" x2="800" y2="230" class="msg"/>
+  <text x="530" y="222" text-anchor="middle" class="small">TELEM (не в цикле 100 мс)</text>
+
+  <line x1="440" y1="280" x2="260" y2="280" class="msg"/>
+  <text x="350" y="272" text-anchor="middle" class="small">OCCUP u=0.71</text>
+
+  <line x1="80" y1="330" x2="260" y2="330" class="msg"/>
+  <text x="170" y="322" text-anchor="middle" class="small">z = 0, тишина</text>
+
+  <rect x="190" y="360" width="200" height="36" rx="4" class="note"/>
+  <text x="290" y="383" text-anchor="middle" class="small">n3 → HOLD на 12 с</text>
+
+  <text x="24" y="430" class="small">После HOLD при низком P(o) узлы возвращаются в IDLE и снижают u до u_min при соблюдении E_min idle.</text>
+</svg>

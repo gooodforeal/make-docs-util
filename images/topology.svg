@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360">
+  <defs>
+    <style>
+      .road { fill: #d5d8de; }
+      .lane { stroke: #ffffff; stroke-width: 2; stroke-dasharray: 10 10; }
+      .walk { fill: #ece7dc; }
+      .lamp { fill: #f6c445; stroke: #1e3a5f; stroke-width: 1; }
+      .gw { fill: #2d7a46; }
+      .lbl { font: 12px Arial, Helvetica, sans-serif; fill: #1a2744; }
+      .small { font: 11px Arial, Helvetica, sans-serif; fill: #3d4a63; }
+      .title { font: 700 15px Arial, Helvetica, sans-serif; fill: #1a2744; }
+      .corr { fill: none; stroke: #c45c26; stroke-width: 2.2; stroke-dasharray: 6 4; }
+      .link { stroke: #5a7aa0; stroke-width: 1.4; fill: none; }
+    </style>
+  </defs>
+  <rect width="920" height="360" fill="#ffffff"/>
+  <text x="24" y="28" class="title">Улица, вид сверху (фрагмент)</text>
+
+  <rect x="20" y="70" width="880" height="36" class="walk"/>
+  <rect x="20" y="106" width="880" height="90" class="road"/>
+  <line x1="20" y1="151" x2="900" y2="151" class="lane"/>
+  <rect x="20" y="196" width="880" height="36" class="walk"/>
+
+  <g id="nodes">
+    <circle cx="90" cy="78" r="7" class="lamp"/>
+    <circle cx="200" cy="78" r="7" class="lamp"/>
+    <circle cx="310" cy="78" r="7" class="lamp"/>
+    <circle cx="420" cy="78" r="7" class="lamp"/>
+    <circle cx="530" cy="78" r="7" class="lamp"/>
+    <circle cx="640" cy="78" r="7" class="lamp"/>
+    <circle cx="750" cy="78" r="7" class="lamp"/>
+    <circle cx="860" cy="78" r="7" class="gw"/>
+  </g>
+  <line x1="90" y1="78" x2="200" y2="78" class="link"/>
+  <line x1="200" y1="78" x2="310" y2="78" class="link"/>
+  <line x1="310" y1="78" x2="420" y2="78" class="link"/>
+  <line x1="420" y1="78" x2="530" y2="78" class="link"/>
+  <line x1="530" y1="78" x2="640" y2="78" class="link"/>
+  <line x1="640" y1="78" x2="750" y2="78" class="link"/>
+  <line x1="750" y1="78" x2="860" y2="78" class="link"/>
+
+  <rect x="248" y="128" width="44" height="22" rx="4" fill="#2c3344"/>
+  <text x="270" y="144" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#fff">авто</text>
+
+  <rect x="300" y="48" width="360" height="60" rx="8" class="corr"/>
+  <text x="480" y="42" text-anchor="middle" class="small">коридор опережения K = 3</text>
+
+  <text x="90" y="250" text-anchor="middle" class="lbl">n1</text>
+  <text x="200" y="250" text-anchor="middle" class="lbl">n2</text>
+  <text x="310" y="250" text-anchor="middle" class="lbl">n3 ACTIVE</text>
+  <text x="420" y="250" text-anchor="middle" class="lbl">n4</text>
+  <text x="530" y="250" text-anchor="middle" class="lbl">n5</text>
+  <text x="640" y="250" text-anchor="middle" class="lbl">n6</text>
+  <text x="750" y="250" text-anchor="middle" class="lbl">n7</text>
+  <text x="860" y="250" text-anchor="middle" class="lbl">шлюз</text>
+
+  <text x="24" y="290" class="small">Жёлтые круги — обычные узлы. Зелёный — шлюз на перекрёстке (корень RPL).</text>
+  <text x="24" y="310" class="small">Пунктир — узлы, которые поднимают яркость до прибытия автомобиля. Движение слева направо.</text>
+  <text x="24" y="338" class="small">Шаг опор 30 м. Связи mesh показаны вдоль оси дороги.</text>
+</svg>
