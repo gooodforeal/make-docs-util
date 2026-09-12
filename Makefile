@@ -45,6 +45,7 @@ docx: figures
 	$(PANDOC) $(COMMON) build/toc.md $(CHAPTERS) \
 		--number-sections \
 		-o build/lumen.docx
+	rm -f build/toc.md
 
 html: figures
 	python3 scripts/build_html.py
